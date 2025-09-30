@@ -1,0 +1,169 @@
+/* ======  Variáveis globais ====== */
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --accent: #238636;
+}
+
+/* ======  Reset / base ====== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 16px; /* melhor legibilidade no celular */
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0d1117;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(35,134,54,0.4);
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 600px; /* limite no desktop */
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ====== Form ====== */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.form-card label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ====== Buttons ====== */
+
+.actions {
+  display: flex;
+  flex-direction: column; /* mobile: botões em coluna */
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.primary:hover {
+  background: #2ea043;
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.ghost:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+/* ===== Lista de Cards ===== */
+
+.cards-list {
+  display: grid;
+  gap: 14px;
+}
+
+.produto-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+
+.produto-dados {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.produto-info {
+  background: #0d1117;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.produto-info strong {
+  display: block;
+  color: var(--text);
+  margin-top: 2px;
+  font-size: 1rem;
+}
+
+.produto-card .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+}
+
+/* ===== Responsivo ===== */
+
+@media (min-width: 500px) {
+  .actions {
+    flex-direction: row; /* desktop: lado a lado */
+  }
+}
+
+@media (min-width: 500px) {
+  .produto-dados {
+    grid-template-columns: 1fr 1fr; /* desktop em 2 colunas */
+  }
+}
+
