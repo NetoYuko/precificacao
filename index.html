@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precificador</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <!-- Formulário -->
+    <section class="card form-card">
+        <h1>Precificação</h1>
+      <form id="calc-form">
+        <label>
+          Nome do produto:
+          <input id="produto" type="text" placeholder="Ex.: Pão francês" required>
+        </label>
+
+        <label>
+          Quantidade do lote:
+          <input id="qtd" type="number" min="1" step="1" placeholder="Ex.: 50" required>
+        </label>
+
+        <label>
+          Custo total do lote (R$):
+          <input id="custo" type="text" placeholder="Ex.: 45,90" required>
+        </label>
+
+        <label>
+          Margem de lucro (%):
+          <input id="margem" type="number" step="0.1" placeholder="Ex.: 30" required>
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="primary">Adicionar Produto</button>
+          <button type="reset" class="ghost">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Lista de cards -->
+    <section id="produtos" class="cards-list"></section>
+  </main>
+</body>
+</html>
